@@ -1,0 +1,64 @@
+{
+  "title": {
+    "name": "Cybex GameCenter",
+    "index": "Index",
+    "share": "Share"
+  },
+  "error": {
+    "404": "The page could not be found."
+  },
+  "tags": {
+    "rpg": "RPG",
+    "strategy": "Strategy",
+    "casual": "Casual",
+    "card": "Card",
+    "collection": "Encrypt Collection",
+    "bet": "Gamble",
+    "simulation": "Simulation",
+    "combat" : "Combat"
+  },
+  "buttons": {
+    "go_website": "WEBSITE",
+    "more": "MORE",
+    "reset": "RESET",
+    "confirm": "CONFIRM",
+    "reservation" : "Reserve",
+    "load_more" : "More",
+    "coming_soon" : "Comeing Soon",
+    "go_get_it" : "Go for it!"
+  },
+  "card-titles": {},
+  "card-labels": {},
+  "navigationBar": {
+    "navigation": "Navigation",
+    "filter": "Filter",
+    "platform": "Platform",
+    "gameType": "GameType"
+  },
+  "notice": {
+    "title": "I am a Notice",
+    "content": "Cybex Game Center's URL copied. Have fun sharing～^_^",
+    "ok": "Understood"
+  },
+  "share":{
+    "wechat": "Wechat",
+    "wechat-moments": "Wechat Moments",
+    "weibo": "Weibo",
+    "url": "Copy Url", 
+    "to": "Share to",
+    "cancel": "Cancel",
+    "wechat-tips":"Plesas scan or identify the QR code in Wechat，hide by click wechat icon again"
+  },
+  "listData": {
+    "gameType": [
+      "RPG",
+      "Strategy",
+      "Casual",
+      "Card",
+      "Encrypt Collection",
+      "Gamble",
+      "Simulation",
+      "Combat"
+    ]
+  }
+}
