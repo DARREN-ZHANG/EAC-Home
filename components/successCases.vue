@@ -1,6 +1,15 @@
 <template>
   <v-container>
-    <v-layout column>
+    <v-layout row>
+      <v-flex xs10>
+        <h2>成功案例</h2>
+      </v-flex>
+      <v-flex xs2>
+        <span>更多 ></span>
+      </v-flex>
+    </v-layout>
+
+    <v-layout column class="mt-10"> 
       <template v-for="(item,i) in items">
         <v-layout
           row

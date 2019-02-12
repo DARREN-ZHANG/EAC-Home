@@ -1,16 +1,14 @@
 <template>
-  <div>
-    英国页面放点啥好呢
-  </div>
+  <country-summary-top>
+  </country-summary-top>
 </template>
-
 <style>
 </style>
 <script>
-import contryContent from '~/components/countryContent.vue'
+import countrySummaryTop from '~/components/countrySummaryTop.vue'
 export default {
- components:{
-     contryContent,
- }
+  components: {
+    countrySummaryTop,
+  }
 }
 </script>

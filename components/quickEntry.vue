@@ -1,6 +1,15 @@
 <template>
   <v-container>
     <v-layout
+      row
+      justify-start
+      align-center
+      fill-height
+    >
+      <h2>{{subtitle}}</h2>
+    </v-layout>
+    <v-layout
+      class="mt-10"
       wrap
       column
     >
@@ -10,6 +19,7 @@
       >
         <template v-for="(item,i) in items">
           <v-flex
+            class="align-center"
             xs3
             :key="i"
           >
@@ -37,6 +47,12 @@
 .divider {
   margin-bottom: 0px;
 }
+.mt-10 {
+  margin-top: 10px;
+}
+.align-center {
+  text-align: center;
+}
 </style>
 
 <script>
@@ -46,13 +62,9 @@ export default {
       type: Array,
       default: []
     },
-    subtitle: {
-      type: String,
-      default: ''
-    }
   },
   data: () => ({
-
+    subtitle: '快速阅读通道',
   })
 }
 </script>

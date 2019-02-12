@@ -1,5 +1,8 @@
 <template>
   <v-container>
+    <v-layout row justify-start align-center fill-height>
+       <h2 class="group-name">{{subtitle}}</h2>
+    </v-layout>
     <v-layout
       wrap
       column
@@ -23,7 +26,7 @@
           </v-flex>
         </template>
       </v-layout>
-      <v-divider class="divider"></v-divider>
+      <v-divider></v-divider>
     </v-layout>
   </v-container>
 </template>
@@ -39,9 +42,6 @@
   width: 40px;
   height: 40px;
 }
-.divider {
-  margin-bottom: 0px;
-}
 </style>
 
 <script>
@@ -50,14 +50,10 @@ export default {
     items: {
       type: Array,
       default: []
-    },
-    subtitle: {
-      type: String,
-      default: ''
     }
   },
   data: () => ({
-
+    subtitle: '留学目的地',
   })
 }
 </script>

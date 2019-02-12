@@ -34,6 +34,7 @@
       <!-- toolbar -->
 
       <v-toolbar-title v-text="title" />
+      <span class="toolbar-subtitle">{{eac}}</span>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon @click="drawer = !drawer" />
     </v-toolbar>
@@ -65,6 +66,10 @@
 .copyright {
   text-align: center;
 }
+.toolbar-subtitle{
+  margin-left: 4px;
+  margin-top: 2px;
+}
 </style>
 
 
@@ -84,32 +89,32 @@ export default {
         {
           icon: 'school',
           title: '留学',
-          to: '/inspire'
+          to: '/main/study'
         },
         {
           icon: 'flight',
           title: '游学',
-          to: '/inspire'
+          to: '/main/studyTour'
         },
         {
           icon: 'books',
           title: '签证',
-          to: '/inspire'
+          to: '/main/visa'
         },
         {
           icon: 'language',
           title: '移民',
-          to: '/inspire'
+          to: '/main/immigrate'
         },
         {
           icon: 'work',
           title: '招聘',
-          to: '/inspire'
+          to: '/main/career'
         },
         {
           icon: 'info',
           title: '关于我们',
-          to: '/inspire'
+          to: '/main/about'
         },
 
 
@@ -117,7 +122,8 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'EAC'
+      title: 'EAC',
+      eac:'伊美思教育'
     }
   }
 }

@@ -16,51 +16,20 @@
       ></v-carousel-item>
     </v-carousel>
     <!-- 目的地国家 -->
-    <h3 class="group-name">{{destination}}</h3>
     <countries-grid
       class="grid-area"
       :items="countries"
     >
     </countries-grid>
     <!-- 快速通道 -->
-    <h3 class="group-name">{{quickentry}}</h3>
     <quick-entry
       :items="quicks"
       class="grid-area"
     ></quick-entry>
     <!-- 成功案例 -->
-    <v-layout row>
-      <v-flex xs10>
-        <h3>成功案例</h3>
-      </v-flex>
-      <v-flex xs2>
-        <span>更多 ></span>
-      </v-flex>
-    </v-layout>
-    <success-examples :items="examples"></success-examples>
+    <success-cases :items="examples"></success-cases>
     <!-- 明星顾问 -->
-    <v-layout row>
-      <v-flex xs10>
-        <h3>明星顾问</h3>
-      </v-flex>
-      <v-flex xs2>
-        <span>更多 ></span>
-      </v-flex>
-    </v-layout>
-    <a href="/teacher">
-      <v-carousel
-        :height=180
-        hide-delimiters
-      >
-        <v-carousel-item
-          v-for="(item, i) in items"
-          :key="i"
-          :src="item.src"
-        >
-        </v-carousel-item>
-      </v-carousel>
-    </a>
-
+    <star-mentor></star-mentor>
   </v-layout>
 </template>
 
@@ -77,15 +46,21 @@
 <script>
 import countriesGrid from '~/components/countriesGrid.vue';
 import quickEntry from '~/components/quickEntry.vue';
-import successExamples from '~/components/successExamples.vue';
-
+import successCases from '~/components/successCases.vue';
+import starMentor from '~/components/starMentor.vue';
 
 export default {
+
+  components: {
+    countriesGrid,
+    quickEntry,
+    successCases,
+    starMentor
+  },
+
   data() {
     return {
-      destination: '留学目的地',
       subjects: '热门专业',
-      quickentry: '快速阅读通道',
       items: [
         {
           src: '/banner/banner-01.jpeg'
@@ -164,25 +139,6 @@ export default {
         title: '留学产品'
       },
       ],
-
-      hot_subjects: [
-        {
-          icon: '',
-          title: '会计'
-        },
-        {
-          icon: '',
-          title: '金融'
-        },
-        {
-          icon: '',
-          title: '计算机'
-        },
-        {
-          icon: '',
-          title: '音乐'
-        },
-      ],
       countries: [
         {
           page: '/countries/us',
@@ -228,11 +184,7 @@ export default {
     }
   },
 
-  components: {
-    countriesGrid,
-    quickEntry,
-    successExamples,
-  },
+
 
 }
 </script>
