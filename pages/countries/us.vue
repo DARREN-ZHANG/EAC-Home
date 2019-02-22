@@ -4,7 +4,10 @@
     </country-summary-top>
     <v-container>
       <!-- 留学优势 -->
-      <pros :pros="pros_detail" :pros_links="pros_links"></pros>
+      <pros
+        :pros="pros_detail"
+        :pros_links="pros_links"
+      ></pros>
       <v-divider></v-divider>
       <fee></fee>
       <v-divider></v-divider>
@@ -58,7 +61,6 @@ export default {
           url: 'https://m.eic.org.cn/News/Detail/fmYyyigAAUmC6P254OMS3Q',
           title: '美国10大名校2018年录取率'
         },
-
       ],
     }
   }

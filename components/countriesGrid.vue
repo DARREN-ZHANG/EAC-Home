@@ -16,7 +16,7 @@
             xs3
             :key="i"
           >
-            <a :href="item.page">
+            <a :href="item.page" class="no-underline">
               <img
                 class="subject-icon"
                 :src="item.icon"
@@ -32,6 +32,9 @@
 </template>
 
 <style>
+.no-underline{
+  text-decoration: none;
+}
 .group-name {
   margin-bottom: 10px;
 }

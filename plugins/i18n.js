@@ -11,9 +11,10 @@ export default ({ app, store, redirect, router, route }) => {
     locale: store.state.i18n.locale,
     fallbackLocale: defaultLocale,
     messages: {
-      'en': require('~/locales/en.json'),
+      // 'en': require('~/locales/en.json'),
       'zh-cn': require('~/locales/zh-cn.json'),
-    }
+    },
+    silentTranslationWarn: true//禁用导向默认locale的warning
   })
 
   // Path获取函数，所有router使用时需使用$i18n.path来获取uri

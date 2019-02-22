@@ -2,10 +2,10 @@
   <v-container>
     <v-layout row>
       <v-flex xs10>
-        <h2>明星顾问</h2>
+        <h2>{{$t('title.star-mentor')}}</h2>
       </v-flex>
       <v-flex xs2>
-        <span>更多 ></span>
+        <span>{{$t('title.more')}}</span>
       </v-flex>
     </v-layout>
 
@@ -36,13 +36,13 @@ export default {
           src: '/peppa.jpeg'
         },
         {
-          src: '/peppa.jpeg'
+          src: '/sponge.jpg'
         },
         {
           src: '/peppa.jpeg'
         },
         {
-          src: '/peppa.jpeg'
+          src: '/sponge.jpg'
         }
       ],
     }

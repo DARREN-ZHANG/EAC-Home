@@ -10,7 +10,7 @@
     >
       <v-list>
         <v-list-tile
-          v-for="(item, i) in items"
+          v-for="(item, i) in $t('side-bar.headers')"
           :key="i"
           :to="item.to"
           router
@@ -80,45 +80,6 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'home',
-          title: '首页',
-          to: '/'
-        },
-        {
-          icon: 'school',
-          title: '留学',
-          to: '/main/study'
-        },
-        {
-          icon: 'flight',
-          title: '游学',
-          to: '/main/studyTour'
-        },
-        {
-          icon: 'books',
-          title: '签证',
-          to: '/main/visa'
-        },
-        {
-          icon: 'language',
-          title: '移民',
-          to: '/main/immigrate'
-        },
-        {
-          icon: 'work',
-          title: '招聘',
-          to: '/main/career'
-        },
-        {
-          icon: 'info',
-          title: '关于我们',
-          to: '/main/about'
-        },
-
-
-      ],
       miniVariant: false,
       right: true,
       rightDrawer: false,

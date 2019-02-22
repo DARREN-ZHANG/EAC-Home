@@ -23,7 +23,7 @@
             xs3
             :key="i"
           >
-            <a :href="item.page">
+            <a :href="item.page" class="no-underline">
               <img
                 :src="item.icon"
                 class="quick-logo"

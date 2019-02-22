@@ -2,10 +2,10 @@
   <v-container>
     <v-layout row>
       <v-flex xs10>
-        <h2>成功案例</h2>
+        <h2>{{$t('title.success-case')}}</h2>
       </v-flex>
       <v-flex xs2>
-        <span>更多 ></span>
+        <span>{{$t('title.more')}}</span>
       </v-flex>
     </v-layout>
 
@@ -14,24 +14,33 @@
         <v-layout
           row
           :key="i"
+          justify-center
+          class="mt-1"
         >
           <v-flex xs1>
             <img src="/ic_case.png" class="case-logo">
           </v-flex>
           <v-flex xs11>
-            <span>{{item.title}}</span>
+            <span class="case-title">{{item.title}}</span>
           </v-flex>
         </v-layout>
       </template>
-      <v-divider></v-divider>
+      <v-divider class="mt-12"></v-divider>
     </v-layout>
   </v-container>
 </template>
 
 <style>
+.case-title{
+  font-size: 16px;
+}
+.mt-12{
+  margin-top: 12px;
+}
 .case-logo {
-  width: 15px;
-  height: 15px;
+  margin-top: 3px;
+  width: 16px;
+  height: 16px;
 }
 </style>
 

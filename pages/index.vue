@@ -10,7 +10,7 @@
       hide-delimiters
     >
       <v-carousel-item
-        v-for="(item,i) in items"
+        v-for="(item,i) in banners"
         :key="i"
         :src="item.src"
       ></v-carousel-item>
@@ -18,16 +18,16 @@
     <!-- 目的地国家 -->
     <countries-grid
       class="grid-area"
-      :items="countries"
+      :items="$t('home-page.countries')"
     >
     </countries-grid>
     <!-- 快速通道 -->
     <quick-entry
-      :items="quicks"
+      :items="$t('home-page.quick-entries')"
       class="grid-area"
     ></quick-entry>
     <!-- 成功案例 -->
-    <success-cases :items="examples"></success-cases>
+    <success-cases :items="$t('home-page.admissionCases')"></success-cases>
     <!-- 明星顾问 -->
     <star-mentor></star-mentor>
   </v-layout>
@@ -60,8 +60,7 @@ export default {
 
   data() {
     return {
-      subjects: '热门专业',
-      items: [
+      banners: [
         {
           src: '/banner/banner-01.jpeg'
         },
@@ -75,116 +74,7 @@ export default {
           src: '/banner/banner-04.jpeg'
         }
       ],
-      examples: [
-        {
-          title: '凯斯西储大学录取案例',
-          link: ''
-        },
-        {
-          title: '布里斯托录取案例',
-          link: ''
-        },
-        {
-          title: '墨尔本大学录取案例',
-          link: ''
-        },
-        {
-          title: '帝国理工学院录取案例',
-          link: ''
-        },
-        {
-          title: '俄亥俄州立大学录取案例',
-          link: ''
-        },
-
-      ],
-      quicks: [{
-        page: '/quickEntries/plan',
-        icon: '/quick/quick_01.png',
-        title: '留学规划'
-      },
-      {
-        page: '/quickEntries/fee',
-        icon: '/quick/quick_02.png',
-        title: '留学费用'
-      },
-      {
-        page: '/quickEntries/ranking',
-        icon: '/quick/quick_03.png',
-        title: '大学排名'
-      },
-      {
-        page: '/quickEntries/applyConditions',
-        icon: '/quick/quick_04.png',
-        title: '申请条件'
-      },
-      {
-        page: '/quickEntries/events',
-        icon: '/quick/quick_05.png',
-        title: '留学活动'
-      },
-      {
-        page: '/quickEntries/cases',
-        icon: '/quick/quick_06.png',
-        title: '成功案例'
-      },
-      {
-        page: '/quickEntries/schools',
-        icon: '/quick/quick_07.png',
-        title: '院校库'
-      },
-      {
-        page: '/quickEntries/product',
-        icon: '/quick/quick_08.png',
-        title: '留学产品'
-      },
-      ],
-      countries: [
-        {
-          page: '/countries/us',
-          icon: '/flags/flag_us.png',
-          title: '美国'
-        },
-        {
-          page: '/countries/uk',
-          icon: '/flags/flag_uk.png',
-          title: '英国'
-        },
-        {
-          page: '',
-          icon: '/flags/flag_hk.png',
-          title: '香港'
-        },
-        {
-          page: '',
-          icon: '/flags/flag_si.png',
-          title: '新加坡'
-        },
-        {
-          page: '',
-          icon: '/flags/flag_au.png',
-          title: '澳洲'
-        },
-        {
-          page: '',
-          icon: '/flags/flag_ge.png',
-          title: '德国'
-        },
-        {
-          page: '',
-          icon: '/flags/flag_nz.png',
-          title: '新西兰'
-        },
-        {
-          page: '',
-          icon: '/flags/flag_ca.png',
-          title: '加拿大'
-        }
-      ]
     }
   },
-
-
-
 }
 </script>
